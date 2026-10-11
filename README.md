@@ -1,10 +1,10 @@
-# [Insira o Nome do Projeto]
+# [Churn Streaming]
 
 ![image](https://github.com/danielesantiago/TemplatePED/assets/64613885/cc24a702-46b8-4263-a764-8c65c56f02ac)
 
 
 ## 📌 Visão Geral
-Este projeto visa [insira o objetivo principal do projeto aqui, por exemplo, "analisar dados de vendas para identificar tendências de mercado"]. Utilizamos [insira as técnicas utilizadas, por exemplo, "técnicas avançadas de análise de dados, machine learning e processamento de linguagem natural"] para [insira o resultado esperado do projeto, por exemplo, "identificar padrões de compra e prever tendências futuras"].
+Este projeto analisa a base de clientes de um um "serviço de streaming por assinatura", para entender "quem cancela, por quê e em ue momento da vida do cliente", o cancelamento (churn) acontece. Utilizamos "análse explorat´ria de dados (limpeza, anãlise univariada e análise bivariada) e frameworks de negócio (cohort, RFM e Pareto)** para transformar um extrato bruto de clientes em hipóteses acionáveis sobre retenção.
 
 📄 [Veja o template da apresentação](https://github.com/profrenatabiaggi/template/blob/master/reports/figures/Template_Case.pptx)
 
