@@ -4,7 +4,7 @@
 
 
 ## 📌 Visão Geral
-Este projeto analisa a base de clientes de um um "serviço de streaming por assinatura", para entender "quem cancela, por quê e em ue momento da vida do cliente", o cancelamento (churn) acontece. Utilizamos "análse explorat´ria de dados (limpeza, anãlise univariada e análise bivariada) e frameworks de negócio (cohort, RFM e Pareto)** para transformar um extrato bruto de clientes em hipóteses acionáveis sobre retenção.
+Este projeto analisa a base de clientes de um um "serviço de streaming por assinatura", para entender "quem cancela, por quê e em que momento da vida do cliente", o cancelamento (churn) acontece. Utilizamos "análse exploratória de dados (limpeza, análise univariada e análise bivariada) e frameworks de negócio (cohort, RFM e Pareto)** para transformar um extrato bruto de clientes em hipóteses acionáveis sobre retenção.
 
 📄 [Veja o template da apresentação](https://github.com/profrenatabiaggi/template/blob/master/reports/figures/Template_Case.pptx)
 
@@ -12,29 +12,32 @@ Este projeto analisa a base de clientes de um um "serviço de streaming por assi
 
 ## 💼 Entendimento do Negócio
 
-[Descreva o contexto e a importância do seu projeto. Por exemplo, "No contexto atual de crescente volume de dados, entender padrões complexos em comportamentos de consumidores é crucial para estratégias de marketing eficazes."]
+Em um serviço de assinatura, reter um cliente custa muito menos do que adquirir um novo - por isso, entender o churn é uma das análises de maior impacto financeiro. A empresa desse caso, desconfia que vem perdendo assinantes, mas não sabe quem cancela, por que cancela, nem em que momento da relação isso acontece. Este projeto explora os dados para responder a estas perguntas, antes de qualquer modelo preditivo.
 
 **Tipos de Análise Realizados:**
-- [Insira o tipo de análise, por exemplo, "Análise de Sentimento"]
-- [Outro tipo de análise, por exemplo, "Tendências de Mercado"]
-- [Mais um tipo, por exemplo, "Padrões de Comportamento do Consumidor"]
+- Anãlise Univariada com Limpeza e TRatamento de dados
+- Anãlise Bivariada (relação de cada variável com o Churn)
+- Anãlise de Retenção por Cohort
+- Segmentação de clientes com RFM adaptado para assinatura
+- Anãlise de Pareto dos motivos do cancelamento.
 
 **Principais Indicadores Chave de Desempenho:**
-- [Primeiro indicador, por exemplo, "Taxa de Conversão"]
-- [Segundo indicador, por exemplo, "Retenção de Clientes"]
-- [Terceiro indicador, por exemplo, "Satisfação do Cliente"]
+- Taxa de Churn (geral e por segmento)
+- Retenção por safra de assinatura (Cohort)
+- NPS por grupo de Churn
+- Tempo de vida do cliente (meses por assinatura)
 
 ## 📊 Análise do Modelo Atual
 
-[Descreva a situação atual e o que seu projeto propõe a melhorar. Por exemplo, "Nosso modelo atual enfrenta desafios em... A análise visa otimizar..."]
-
+A base bruta chegou com diversos problemas de qualidade típicos de um extrato exportado ás pressas de múltiplos sistemas: valores em escalas misturadas, categorias escritas de várias formas, ausências disfarçadas e datas armazenadas como textos. A primeira etapa do projeto foi diagnosticar e tratar esses problemas - porque nenhuma conclusão é confiável sobre um dado sujo.
+Um cuidado central da anãlise foi o viés de maturação: clientes muito recentes aparecem como "não churn" apenas porque ainda não tiveram tempo de cancelar. Para comprarar os grupos de forma justa, a anãlise de churn considerou apenas clientes com pelo menos 220 dias de assinatura - uma premissa assumida e registrada explicitamente.
 
 ## 🛠 Pré-processamento 
-O pré-processamento de dados é crucial em projetos de machine learning. Utilizamos [insira as ferramentas ou métodos usados, por exemplo, "Pipeline do Scikit-learn"] para garantir eficácia e reprodutibilidade. 
+O pré-processamento foi conduzdo com Python, tratando cada problema de qualidade de forma justificasa (corrigir, remover, manter ou imputar), e criando as variáveis necessárias para os frameworks.
 
 _Considerações Importantes:_
-1. [Primeira consideração, por exemplo, "Todos os valores estão em uma única unidade de medida."]
-2. [Segunda consideração, por exemplo, "Os dados são anônimos para proteger a privacidade dos usuários."]
+1. Variáveis de engajamento (dias ativos, recencia, horas assistidas) são contaminadas pelo próprio Churn. (vazamento de target) - quem cancelou, parou de usar porque saiu.= não o contrário - e por isso não foram usadas para explicar o Churn.
+
    
 _Etapas do Pré-processamento no Pipeline:_
 1. [Primeira etapa, por exemplo, "Normalização dos Dados"]
