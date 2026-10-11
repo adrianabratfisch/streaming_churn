@@ -70,28 +70,16 @@ As principais descobertas da análise:
 A estrutura de diretórios do projeto foi organizada da seguinte forma:
 ```
 ├── README.md 
-├── data
-│ ├── processed
-│ └── raw
-├── models
 ├── notebooks 
-├── reports
-│ └── figures 
-├── requirements.txt
-├── src
-│ ├── __init__.py 
-│ ├── data
-│ │ └── [NomeDoScriptDeDados].py 
-│ ├── features
-│ │ └── [NomeDoScriptDeFeatures].py 
-│ ├── models
-│ │ ├── predict_model.py 
-│ │ └── train_model.py 
+├── Estatístca.ipynb
+ 
 
-```
 
 ## 🚧 Próximos Passos
 
-[Descreva os próximos passos para o seu projeto, por exemplo, "O próximo passo é implementar o modelo em um ambiente de produção para testar sua eficácia em tempo real."]
+* Investigar a causa da piora da retenção nas safras recentes ( o que mudou na aquisição ou no produto ao longo de 2023)
+* Validar as hipóteses de churn com um teste A/B - por exemplo uma ação de retenção direcionada aos clientes nos primeiros meses de vida.
+* Construir um modelo preditivo de churn usando apenas as variáveis limpas(não contaminadas) , com o NPS como o principal preditor.
+* Aprofundar a análise de funil de onboarding para reduzor o gargalo de conversão inicial.
 
 
