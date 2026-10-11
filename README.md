@@ -57,7 +57,13 @@ Esse projeto aplica frameworks de análise de negócio para extrair valor dos da
 
 ## 📈 Insights e Conclusões
 
-[Resuma os principais insights obtidos e as conclusões do seu projeto. Por exemplo, "Nossa análise revelou que... Isso sugere que..."]
+As principais descobertas da análise:
+* O NPS é o sinal mais forte de churn: clientes que cancelaram tinham NPS médio de 4,1 contra 7,4 dos que permaneceram.
+* A retenção piorou nas safras mais recentes: comparando o mesmo mês de vida entre coortes, as safras de 2023 retém menos que as de 2022 - um alerta sobre a qualidade da aquisição ou da experiência ao longo do tempo.
+* O plano básico tem a maior taxa de cancelamento, emquanto idade, região e ciclo (mensal, anual) praticamente não separarm os grupos.
+* Poucos motivos concentram a mairia dos cancelamentos (Pareto), indicando que os esforços devem se concentrar em Preço ou Conteúdos Novos ( a verificar com análise de custos, benchmarking com concorrentes , etc)
+
+  Nota importante: Todas as conclusões são hipóteses embasadas, não relações causais provadas. Confirmar causa exigiria experimentação (ex: testes A/B)
 
 ## 📜 Estrutura do Projeto
 
