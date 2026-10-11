@@ -39,14 +39,20 @@ _Considerações Importantes:_
 1. Variáveis de engajamento (dias ativos, recencia, horas assistidas) são contaminadas pelo próprio Churn. (vazamento de target) - quem cancelou, parou de usar porque saiu.= não o contrário - e por isso não foram usadas para explicar o Churn.
 
    
-_Etapas do Pré-processamento no Pipeline:_
-1. [Primeira etapa, por exemplo, "Normalização dos Dados"]
-2. [Segunda etapa, por exemplo, "Tratamento de Valores Ausentes"]
-3. [Terceira etapa, por exemplo, "Codificação de Variáveis Categóricas"]
+_Etapas do Pré-processamento:
+1. Remoção de clientes duplicados (cliente_id repetido
+2. Conversão das colunas de data para o tipo Datetime
+3. Padronização de categorias (plano, canal_aquisicao) e tratamento de ausências disfarçadas ("?" na região
+4. Correlação de escala em valor_mensal (valores em centavos divididos por 100)
+5. Tratamentos de valores impossíveis em idade
+6. Feature Engineering recencia, meses assinatura e receita acumulada.
 
-## 🤖 Modelagem e Avaliação
+## 🤖 Frameworks e Avaliação
 
-Utilizamos [insira as ferramentas ou métodos de modelagem usados, por exemplo, "algoritmos de machine learning como XGBoost e RandomForest"] para construir nosso modelo. As métricas de avaliação incluem [insira as métricas usadas, por exemplo, "precisão, recall e a área sob a curva ROC"].
+Esse projeto aplica frameworks de análise de negócio para extrair valor dos dados de forma estatística.
+* Cohort: matriz de retenção por safra de assinatura, lida por linha, coluna e diagonal.
+* RFM adaptado: como não há compra repetida, adaptamos as três dimensões - Recência (dias desde o último acesso), Frequência (uso no último mês) e MOnetário (Valor do plano) - validando a segmentação pela taxa de churn de cada grupo.
+* Pareto: concentração dos motivos de cancelamento, para identificar os poucos motivos que respondem pela maioria das saídas.
 
 
 ## 📈 Insights e Conclusões
