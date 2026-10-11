@@ -8,7 +8,7 @@ Este projeto analisa a base de clientes de um um "serviço de streaming por assi
 
 📄 [Veja o template da apresentação](https://github.com/profrenatabiaggi/template/blob/master/reports/figures/Template_Case.pptx)
 
-📄 [Veja o template do notebook](https://github.com/profrenatabiaggi/template/blob/master/notebooks/Case_Fraude.ipynb)
+📄 [Veja o template do notebook][(https://github.com/profrenatabiaggi/template/blob/master/notebooks/Case_Fraude.ipynb)](https://github.com/adrianabratfisch/streaming_churn/tree/master/notebooks)
 
 ## 💼 Entendimento do Negócio
 
